@@ -51,9 +51,81 @@
     margin-top: 50px;
     margin-bottom: 50px;
     grid-template-rows: 532px 343px;
+    
+    &__text{
+        padding: 0 20px;
+        p{
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 80px;
+            padding: 0 8px;
+        }
+        span{
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+    }
+    &_img{
+        text-align: center;
+    }
+    &__li{
+        display: none;
+    }
+    &__lisan{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &__btns{
+        padding:16PX 42px;
+        border:4px solid $bg-primary;
+        border-radius:5px;
+        background-color: $bg-primary;
+        // margin:0 36
+        color: $cg-primary;
+        transition: .5s;
+        cursor: pointer;
+    }:hover{
+        background: $cg-primary;
+        color: $bg-primary;
+    }
+    &__btn{
+        padding:16PX 42px;
+        border:4px solid $bg-primary;
+        border-radius:5px;
+        background-color: $bg-primary;
+        margin:43px 36px;
+        color: $cg-primary;
+        transition: .5s;
+        cursor: pointer;
+    }:hover{
+        background: $cg-primary;
+        color: $bg-primary;
+    }
+    &___iet{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__iet{
+        max-width: 332px;
+        h3{
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 80px;
+        }
+        p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 25px 0;
+        }
+    }
 }
 .skills__item{
-    border: 1px solid red;
+    padding: 20px;
+    background:#F5F5F5;
     border-radius: 10px;
 }
 .skills__item:nth-child(1){
@@ -92,6 +164,7 @@
     }
     .skills{
         grid-template-rows: 442px 241px;
+        
     }
 }
 @media (max-width:770px) {
@@ -124,6 +197,13 @@
     }
     .skills{
         grid-template-rows: 442px 210px;
+        &___iet{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            flex-direction: column-reverse;
+
+        }
     }
 }
 @media (max-width:600px) {
@@ -142,6 +222,9 @@
     .skills{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 535px 535px;
+        &__li{
+            display: inline-block;
+        }
     }
     .skills__item:nth-child(1){
         grid-row: auto;
